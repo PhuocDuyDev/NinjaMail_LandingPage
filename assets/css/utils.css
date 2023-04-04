@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@1,900&family=Raleway:wght@500;700;800;900&display=swap');
+:root {
+    --primary-color: #4ba87d;
+    --text-color-black: #000000;
+    --text-color-white: #ffffff;
+    --bg-white-shade: #f7f7f7;
+    --transition-var: all 0.3s ease;
+    --linear-bg: linear-gradient(
+        0deg,
+        #000000 -32.5%,
+        rgba(84, 84, 84, 0.0001) 67.78%
+    );
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: var(--text-color-black);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color-black);
+    font-weight: 700;
+}
+
+.heading-largest {
+    font-size: 6rem;
+    line-height: 8rem;
+}
+
+.heading-section {
+    font-size: 4.4rem;
+    line-height: 4.8rem;
+    text-align: center;
+}
+
+.heading-large {
+    font-size: 3.4rem;
+    line-height: 4rem;
+}
+
+.heading-small {
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+}
+.heading-smallest {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.logo-text {
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+    font-weight: 900;
+}
+
+.logo-text--small {
+    font-size: 2.6rem;
+    line-height: 3.1rem;
+    font-weight: 900;
+}
+
+.description {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+/* LAYOUT */
+.container-full {
+    width: 100%;
+}
+
+.container {
+    width: 110rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* BUTTON */
+button {
+    border: none;
+    outline: none;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+}
+
+.button-primary,
+.button-secondary {
+    max-height: 6.5rem;
+    padding: 2rem 1.6rem;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.105rem;
+    transition: var(--transition-var);
+}
+
+.button-primary {
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+}
+
+.button-secondary {
+    color: var(--primary-color);
+    background-color: var(--text-color-white);
+}
+
+.button-primary.button-primary--small {
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    letter-spacing: 0.1275rem;
+}
+
+.button-primary:hover {
+    color: var(--primary-color);
+    background-color: var(--text-color-white);
+}
+.button-secondary:hover {
+    color: var(--text-color-white);
+    background-color: var(--primary-color);
+}
+.button-primary.button-primary--small:hover {
+    color: var(--primary-color);
+    background-color: var(--text-color-white);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 76.8rem) and (min-width: 37.6rem) {
+    .heading-largest {
+        font-size: 3.8rem;
+        line-height: 5.1rem;
+    }
+
+    .heading-section {
+        font-size: 2.8rem;
+        line-height: 4.8rem;
+    }
+
+    .heading-large,
+    .logo-text {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+    }
+
+    .heading-small {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .heading-smallest {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .logo-text--small {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    /* LAYOUT */
+    .container-full {
+        width: 100%;
+    }
+
+    .container {
+        width: 76.8rem;
+        max-width: 100%;
+        padding: 0 3rem;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    /* BUTTON */
+    .button-primary,
+    .button-secondary {
+        max-height: 4.2rem;
+        padding: 1.4rem 1.2rem;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.065rem;
+        transition: var(--transition-var);
+    }
+
+    .button-primary.button-primary--small {
+        padding: 1rem 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        letter-spacing: 0.082rem;
+    }
+}
+@media screen and (max-width: 37.5rem) {
+    .heading-largest {
+        font-size: 2.2rem;
+        line-height: 2.9rem;
+    }
+
+    .heading-section {
+        font-size: 2.6rem;
+        line-height: 4.8rem;
+    }
+    /* LAYOUT */
+    .container-full {
+        width: 100%;
+    }
+
+    .container {
+        width: 76.8rem;
+        max-width: 100%;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    /* BUTTON */
+    .button-primary,
+    .button-secondary {
+        max-height: 4.2rem;
+        padding: 1.4rem 1.2rem;
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.065rem;
+        transition: var(--transition-var);
+    }
+
+    .button-primary.button-primary--small {
+        padding: .4rem 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        letter-spacing: 0.082rem;
+    }
+}
